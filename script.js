@@ -279,6 +279,12 @@ function showNotification(message, type) {
         existingNotification.remove();
     }
     
+    // Announce to screen readers
+    const announcements = document.getElementById('announcements');
+    if (announcements) {
+        announcements.textContent = message;
+    }
+    
     // Create notification
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
