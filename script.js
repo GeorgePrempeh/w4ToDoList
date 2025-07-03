@@ -194,17 +194,18 @@ function createTaskElement(task) {
     const li = document.createElement('li');
     li.className = `task-item ${task.completed ? 'completed' : ''}`;
     li.dataset.taskId = task.id;
+    li.setAttribute('role', 'listitem');
     
     if (editingTaskId === task.id) {
         // Editing mode
         li.innerHTML = `
-            <div class="task-checkbox ${task.completed ? 'checked' : ''}" onclick="toggleTask(${task.id})"></div>
-            <input type="text" class="edit-input" value="${task.text}" maxlength="100" onkeypress="handleEditKeypress(event, ${task.id})" onblur="cancelEdit()" autofocus>
+            <div class="task-checkbox ${task.completed ? 'checked' : ''}" onclick="toggleTask(${task.id})" role="checkbox" aria-checked="${task.completed}" aria-label="Mark task as ${task.completed ? 'incomplete' : 'complete'}"></div>
+            <input type="text" class="edit-input" value="${task.text}" maxlength="100" onkeypress="handleEditKeypress(event, ${task.id})" onblur="cancelEdit()" autofocus aria-label="Edit task">
             <div class="task-actions">
-                <button class="edit-btn" onclick="saveEdit(${task.id}, this.previousElementSibling.value)" title="Save">
+                <button class="edit-btn" onclick="saveEdit(${task.id}, this.previousElementSibling.value)" title="Save changes" aria-label="Save changes">
                     <i class="fas fa-check"></i>
                 </button>
-                <button class="delete-btn" onclick="cancelEdit()" title="Cancel">
+                <button class="delete-btn" onclick="cancelEdit()" title="Cancel editing" aria-label="Cancel editing">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
@@ -212,13 +213,13 @@ function createTaskElement(task) {
     } else {
         // Normal mode
         li.innerHTML = `
-            <div class="task-checkbox ${task.completed ? 'checked' : ''}" onclick="toggleTask(${task.id})"></div>
-            <span class="task-text">${escapeHtml(task.text)}</span>
+            <div class="task-checkbox ${task.completed ? 'checked' : ''}" onclick="toggleTask(${task.id})" role="checkbox" aria-checked="${task.completed}" aria-label="Mark task as ${task.completed ? 'incomplete' : 'complete'}"></div>
+            <span class="task-text" aria-label="Task: ${escapeHtml(task.text)}">${escapeHtml(task.text)}</span>
             <div class="task-actions">
-                <button class="edit-btn" onclick="editTask(${task.id})" title="Edit">
+                <button class="edit-btn" onclick="editTask(${task.id})" title="Edit task" aria-label="Edit task">
                     <i class="fas fa-edit"></i>
                 </button>
-                <button class="delete-btn" onclick="deleteTask(${task.id})" title="Delete">
+                <button class="delete-btn" onclick="deleteTask(${task.id})" title="Delete task" aria-label="Delete task">
                     <i class="fas fa-trash"></i>
                 </button>
             </div>
@@ -246,6 +247,9 @@ function updateStats() {
     totalTasksSpan.textContent = total;
     completedTasksSpan.textContent = completed;
     pendingTasksSpan.textContent = pending;
+    
+    // Update page title with task count
+    document.title = `To-Do List App (${pending} pending)`;
 }
 
 // Save to localStorage
