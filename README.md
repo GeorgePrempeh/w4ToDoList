@@ -49,15 +49,3 @@ A modern, responsive to-do list application that helps you stay organized and bo
 1. Clone or download this repository
 2. Open `index.html` in your preferred web browser
 3. Start adding tasks and staying organized!
-
-## File Structure
-
-```
-w4ToDoList/
-├── index.html      # Main HTML file
-├── styles.css      # CSS styling
-├── script.js       # JavaScript functionality
-└── README.md       # This file
-```
-
-Enjoy staying productive with your new to-do list! 🚀
