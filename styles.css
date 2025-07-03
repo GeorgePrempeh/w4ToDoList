@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #171b2c 0%, #764ba2 100%);
     min-height: 100vh;
     color: #333;
 }
@@ -145,7 +145,7 @@ header p {
 }
 
 .filter-btn.active {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #2641b9, #1f1061);
     color: white;
     border-color: #667eea;
 }
@@ -166,7 +166,7 @@ header p {
     max-height: 400px;
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: #667eea #f1f1f1;
+    scrollbar-color: #122b9b #f1f1f1;
 }
 
 .task-list::-webkit-scrollbar {
