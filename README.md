@@ -13,7 +13,7 @@ A modern, responsive to-do list application that helps you stay organized and bo
 - 🧹 **Clear Completed**: Remove all completed tasks at once
 - 💾 **Local Storage**: Your tasks are saved automatically
 - 📱 **Responsive Design**: Works perfectly on desktop, tablet, and mobile
-- ⌨️ **Keyboard Shortcuts**: 
+- ⌨️ **Keyboard Shortcuts**:
   - `Enter` to add tasks
   - `Ctrl/Cmd + Enter` to quickly add tasks
   - `Escape` to cancel editing

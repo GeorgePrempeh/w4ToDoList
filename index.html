@@ -20,8 +20,19 @@
       <div class="todo-container">
         <div class="input-section">
           <div class="input-wrapper">
-            <input type="text" id="taskInput" placeholder="Add a new task..." maxlength="100" aria-label="New task input">
-            <button id="addBtn" onclick="addTask()" title="Add new task" aria-label="Add new task">
+            <input
+              type="text"
+              id="taskInput"
+              placeholder="Add a new task..."
+              maxlength="100"
+              aria-label="New task input"
+            />
+            <button
+              id="addBtn"
+              onclick="addTask()"
+              title="Add new task"
+              aria-label="Add new task"
+            >
               <i class="fas fa-plus"></i>
             </button>
           </div>
@@ -43,16 +54,32 @@
         </div>
 
         <div class="filter-section" role="group" aria-label="Task filters">
-          <button class="filter-btn active" onclick="filterTasks('all')" aria-label="Show all tasks">
+          <button
+            class="filter-btn active"
+            onclick="filterTasks('all')"
+            aria-label="Show all tasks"
+          >
             All
           </button>
-          <button class="filter-btn" onclick="filterTasks('pending')" aria-label="Show pending tasks">
+          <button
+            class="filter-btn"
+            onclick="filterTasks('pending')"
+            aria-label="Show pending tasks"
+          >
             Pending
           </button>
-          <button class="filter-btn" onclick="filterTasks('completed')" aria-label="Show completed tasks">
+          <button
+            class="filter-btn"
+            onclick="filterTasks('completed')"
+            aria-label="Show completed tasks"
+          >
             Completed
           </button>
-          <button class="clear-btn" onclick="clearCompleted()" aria-label="Clear all completed tasks">
+          <button
+            class="clear-btn"
+            onclick="clearCompleted()"
+            aria-label="Clear all completed tasks"
+          >
             Clear Completed
           </button>
         </div>
@@ -67,9 +94,14 @@
           <p>Add a task above to get started!</p>
         </div>
       </div>
-      
+
       <!-- Screen reader announcements -->
-      <div aria-live="polite" aria-atomic="true" class="sr-only" id="announcements"></div>
+      <div
+        aria-live="polite"
+        aria-atomic="true"
+        class="sr-only"
+        id="announcements"
+      ></div>
     </div>
 
     <script src="script.js"></script>
