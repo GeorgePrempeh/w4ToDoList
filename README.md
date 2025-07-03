@@ -43,9 +43,3 @@ A modern, responsive to-do list application that helps you stay organized and bo
 - Safari (latest)
 - Edge (latest)
 - Mobile browsers
-
-## Getting Started
-
-1. Clone or download this repository
-2. Open `index.html` in your preferred web browser
-3. Start adding tasks and staying organized!
